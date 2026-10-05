@@ -50,4 +50,3 @@ def test_calc(browser):
         return True
 
     wait.until(check_result)
-    
