@@ -11,7 +11,7 @@ def test_form():
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
 
     wait = WebDriverWait(driver, 20)
-    # 2. Заполнить форму значениями:
+    # 2. Заполнить форму значениями: 
     # First name - Иван
     # Last name - Петров
     # Address - Ленина, 55-3
@@ -95,4 +95,4 @@ def test_form():
         border_color = field_element.value_of_css_property("border-color")
         assert border_color == "rgb(186, 219, 204)", f"Поле {field_id} не подсвечено зеленым"
 
-    driver.quit()
+    driver.quit() 

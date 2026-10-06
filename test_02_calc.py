@@ -34,7 +34,7 @@ def test_calc(browser):
         )
         btn.click()
 
-    # 4. Проверьте, что в окне отобразится результат 15 через 45 секунд
+    # 4. Проверьте, что в окне отобразится результат 15 через 45 секунд 
     print("⏳ Ожидаю 45 секунд, пока калькулятор посчитает...")
 
     def check_result(driver):
@@ -49,4 +49,4 @@ def test_calc(browser):
         print(f"✅ Результат получен: {current_value}")
         return True
 
-    wait.until(check_result)
+    wait.until(check_result) 
