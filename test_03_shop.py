@@ -67,7 +67,7 @@ def test_shop():
                 )
         total_text = total_element.text
         print(f"Получена итоговая стоимость: {total_text}")
-        # 9. Проверяем, что итоговая сумма равна $58.29. 
+        # 9. Проверяем, что итоговая сумма равна $58.29.
         expected_total = "Total: $58.29"
         assert (
             total_text == expected_total
@@ -80,4 +80,4 @@ def test_shop():
 
     # 10. Закрываем браузер
     finally:
-        driver.quit() 
+        driver.quit()

@@ -34,19 +34,9 @@ def test_calc(browser):
         )
         btn.click()
 
-    # 4. Проверьте, что в окне отобразится результат 15 через 45 секунд 
-    print("⏳ Ожидаю 45 секунд, пока калькулятор посчитает...")
+    # 4. Проверьте (assert), что в окне отобразится результат 15 через 45 секунд.
+    result = WebDriverWait(browser, 45).until(
+        EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15")
+    )
 
-    def check_result(driver):
-        current_value = driver.find_element(
-            By.CSS_SELECTOR, ".screen"
-        ).text
-        if current_value != "15":
-            return False
-        assert current_value == "15", (
-            f"Ожидался результат 15, но на экране: {current_value}"
-        )
-        print(f"✅ Результат получен: {current_value}")
-        return True
-
-    wait.until(check_result) 
+    assert result
